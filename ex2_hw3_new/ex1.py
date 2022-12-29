@@ -13,17 +13,28 @@ def move(coord, direction, amount):
         amount - число шагов, целое
     returns:
         [x, y] список с измененными координатами
+        None, если неверный формат списка, направления
     """
-    match direction:
-        case '1':
-            coord[0] += move_check(amount)
-        case '2':
-            coord[0] -= move_check(amount)
-        case '3':
-            coord[1] += move_check(amount)
-        case '4':
-            coord[1] -= move_check(amount)
-    return coord
+    if (type(coord) == list 
+        and type(coord[0]) == (int or float) 
+        and type(coord[1]) == (int or float)):
+
+        match direction:
+                case '1':
+                    coord[0] += move_check(amount)
+                case '2':
+                    coord[0] -= move_check(amount)
+                case '3':
+                    coord[1] += move_check(amount)
+                case '4':
+                    coord[1] -= move_check(amount)
+                case _:
+                    return None
+        return coord
+    else:
+        return None
+        
+    
 
 def move_check(amount):
     """Функция получает количество ходов и проверяет это число

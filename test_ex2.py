@@ -38,3 +38,12 @@ def test_ex1_move_right_0():
 
 def test_ex1_move_left_0():
     assert ex1.move([0, 0], '4', 3) == [0, -3]
+
+def test_ex1_move_wrong_direction():
+    assert ex1.move([0, 0], 'str', 3) == None
+
+def test_ex1_move_wrong_coord():
+    assert ex1.move(['s', 0], '1', 3) == None
+
+def test_ex1_move_wrong_coord_list():
+    assert ex1.move(1, '1', 3) == None
