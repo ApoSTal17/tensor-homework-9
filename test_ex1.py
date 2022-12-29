@@ -1,6 +1,6 @@
-import hw5.ex1 as ex1
-import hw5.ex2 as ex2
-import hw5.ex3 as ex3
+import ex1_hw5.ex1 as ex1
+import ex1_hw5.ex2 as ex2
+import ex1_hw5.ex3 as ex3
 
 ##### Ex1 passwd_validate tests
 

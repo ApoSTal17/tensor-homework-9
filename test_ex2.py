@@ -1,4 +1,4 @@
-import hw3_new.ex1 as ex1
+import ex2_hw3_new.ex1 as ex1
 
 # Сначала создадим тесты проверки доп функции проверки ходов
 
@@ -38,4 +38,3 @@ def test_ex1_move_right_0():
 
 def test_ex1_move_left_0():
     assert ex1.move([0, 0], '4', 3) == [0, -3]
-    
